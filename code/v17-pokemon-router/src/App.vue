@@ -1,5 +1,8 @@
 <template>
-  <header class="header-bar">pokemons</header>
+  <header class="wrapper">
+    <RouterLink to="/"><i class="arrow"></i></RouterLink>
+    <div class="header-bar">pokemons</div>
+  </header>
   <div>
     <RouterView />
   </div>
@@ -10,7 +13,9 @@ export default {}
 </script>
 
 <style scoped>
-.header-bar {
+.wrapper {
+  display: flex;
+  gap: 50px;
   position: sticky;
   height: 80px;
   font-weight: bolder;
@@ -18,5 +23,25 @@ export default {}
   background-color: aquamarine;
   color: white;
   padding-left: 100px;
+}
+.arrow {
+  width: 20px;
+  height: 20px;
+
+  border: solid burlywood;
+  border-width: 0 8px 8px 0;
+  display: inline-block;
+  padding: 5px;
+  transform: rotate(135deg);
+}
+.arrow:hover {
+  width: 20px;
+  height: 20px;
+
+  border: solid white;
+  border-width: 0 8px 8px 0;
+  display: inline-block;
+  padding: 5px;
+  transform: rotate(135deg);
 }
 </style>
