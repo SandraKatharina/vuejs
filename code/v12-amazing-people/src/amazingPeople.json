@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "name": "Rei Kawakubo",
+    "role": "fashion designer",
+    "intro": "Japanese fashion designer based in Tokyo and Paris. She is the founder of Comme des Garçons and Dover Street Market.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Rei_Kawakubo.jpg/520px-Rei_Kawakubo.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Constantin Brancusi",
+    "role": "sculptor",
+    "intro": "February 19, 1876 – March 16, 1957) was a Romanian sculptor, painter and photographer who made his career in France. He is considered one of the most influential sculptors of the 20th century and a pioneer of modernism.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Edward_Steichen_-_Brancusi.jpg/440px-Edward_Steichen_-_Brancusi.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Nina Simone",
+    "role": "singer, songwriter, civil rights activist",
+    "intro": "American singer, songwriter, pianist, and civil rights activist. Her music spanned styles including classical, folk, gospel, blues, jazz, R&B, and pop. ",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Nina_Simone_1965_-_restoration1.jpg/440px-Nina_Simone_1965_-_restoration1.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Ruth Asawa",
+    "role": "sculptor",
+    "intro": "Best known for her large-scale, intricately woven sculptures and public art commissions, Asawa was a pillar of strength and a teacher to many.",
+    "image": "https://d7hftxdivxxvm.cloudfront.net/?quality=80&resize_to=width&src=https%3A%2F%2Fartsy-media-uploads.s3.amazonaws.com%2FbzFV9puXCRbczZ25ABvigA%252FRuth%2BAsawa%2BHolding%2Ba%2BForm-Within-Form%2BSculpture%252C%2B1952%2B%2528Ruth%2BAsawa%2BHolding%2BLooped-Wire%2BSculpture%252C%2B1952%2529.jpg&width=900"
+  }
+]
