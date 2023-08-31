@@ -1,5 +1,7 @@
 <template>
   <h3 style="color: white">CHARACTERS LIST :</h3>
+  <!-- <div v-if="characterNames == 0">{{ numberLoaded / totalCharacters }}</div>
+  <div v-if="characterNames == 0">{{ Math.round((numberLoaded / totalCharacters) * 100) }} %</div> -->
   <div v-if="characterNames == 0">loading ...</div>
   <div v-else>
     <ul>
@@ -18,6 +20,8 @@ export default {
   },
   data() {
     return {
+      numberLoaded: 0,
+      totalCharacters: 0,
       characterNames: []
     }
   },
@@ -32,6 +36,7 @@ export default {
         const response = await fetch(characterURL)
         const result = await response.json()
 
+        this.numberLoaded = i + 1
         this.characterNames.push(result.name)
       }
     }
