@@ -1,6 +1,6 @@
 <template>
   <div class="name-card">
-    <RouterLink :to="`/detail?name=${name}`" @click="clickedLinkHandler" class="link">
+    <RouterLink :to="`/detail?name=${name}`" class="link">
       {{ name }}
     </RouterLink>
   </div>
@@ -10,12 +10,6 @@
 export default {
   props: {
     name: String
-  },
-  emits: ['pokemonClicked'],
-  methods: {
-    clickedLinkHandler() {
-      this.$emit('pokemonClicked')
-    }
   }
 }
 </script>

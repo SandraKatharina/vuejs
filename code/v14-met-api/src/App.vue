@@ -13,7 +13,7 @@ export default {
     }
   },
   async mounted() {
-    const randomNumber = 234
+    const randomNumber = 66391
     const response = await fetch(
       'https://collectionapi.metmuseum.org/public/collection/v1/objects/' + randomNumber
     )
@@ -23,6 +23,42 @@ export default {
     console.log(result)
   }
 }
+
+// function randomizeInRange(min, max) {
+//   return Math.floor(Math.random() * (max - min)) + min
+// }
+// export default {
+//   data() {
+//     return {
+//       isLoadingList: true,
+//       artObject: {},
+//       resultList: {}
+//     }
+//   },
+//   async created() {
+//     const responseList = await fetch(
+//       'https://collectionapi.metmuseum.org/public/collection/v1/objects/'
+//     )
+//     this.resultList = await responseList.json()
+
+//     this.isLoadingList = false
+//     this.showRandomArtObject()
+//   },
+
+//   methods: {
+//     async showRandomArtObject() {
+//       const randomNumber = randomizeInRange(0, this.resultList.total)
+//       const objectID = this.resultList.ObjectIDs[randomNumber]
+
+//       const response = await fetch(
+//         'https://collectionapi.metmuseum.org/public/collection/v1/objects/' + objectID
+//       )
+//       const result = await response.json()
+//       this.artObject = result
+//       console.log(result)
+//     }
+//   }
+// }
 </script>
 
 <style scoped></style>

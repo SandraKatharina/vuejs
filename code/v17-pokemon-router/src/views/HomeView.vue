@@ -1,11 +1,6 @@
 <template>
   <div class="card-container">
-    <NameCard
-      v-for="pokemon in allPokemon"
-      :key="pokemon"
-      :name="pokemon.name"
-      @pokemonClicked="pokemonSelectHandler"
-    />
+    <NameCard v-for="pokemon in allPokemon" :key="pokemon" :name="pokemon.name" />
   </div>
 </template>
 
@@ -19,13 +14,6 @@ export default {
   data() {
     return {
       allPokemon: []
-    }
-  },
-  emits: ['pokemonSelected'],
-  methods: {
-    pokemonSelectHandler(pokemon) {
-      this.$emit('pokemonSelected', pokemon)
-      console.log(pokemon)
     }
   },
 
