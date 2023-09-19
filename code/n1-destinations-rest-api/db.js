@@ -23,6 +23,17 @@ async function getDestinationById(id) {
   return destination;
 }
 
+async function getDestinationByName(name) {
+  const result = await connection
+    .promise()
+    .query("SELECT * FROM cities WHERE name = " + name);
+
+  const rows = result[0];
+  const destinationByName = rows[0];
+
+  return destinationByName;
+}
+
 async function deleteDestinationById(id) {
   const result = await connection
     .promise()
@@ -47,6 +58,7 @@ async function addDestination() {
 module.exports = {
   getAllDestinations,
   getDestinationById,
+  getDestinationByName,
   deleteDestinationById,
   addDestination,
 };

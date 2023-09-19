@@ -18,13 +18,24 @@ app.get("/allDestinations", async function (req, res) {
   });
 });
 
-app.get("/allDestinations/:id", async function (req, res) {
-  const id = parseInt(req.params.id);
-  const destination = await db.getDestinationById(id);
-  res.json({
-    status: "ok",
-    destination: destination,
-  });
+app.get("/allDestinations/:lalala", async function (req, res) {
+  if (parseInt(req.params.lalala) === NaN) {
+    const name = req.params.lalala;
+
+    const destination = await db.getDestinationByName(name);
+    res.json({
+      status: "ok",
+      destination: destination,
+    });
+  } else {
+    const id = parseInt(req.params.lalala);
+
+    const destination = await db.getDestinationById(id);
+    res.json({
+      status: "ok",
+      destination: destination,
+    });
+  }
 });
 
 app.delete("/allDestinations/:id", async function (req, res) {

@@ -2,13 +2,18 @@
   <div class="main">
     <h1>DESTINATIONS</h1>
     <ul class="destinations-list">
-      <li v-for="destination in destinationList" :key="destination.id">{{ destination.name }}</li>
+      <li v-for="destination in destinationList" :key="destination.id">
+        <RouterLink to="/allDestinations/:id">
+          {{ destination.name }} {{ destination.id }}<DeleteButton :id="destination.id" />
+        </RouterLink>
+      </li>
     </ul>
-    <button>DELETE</button>
   </div>
 </template>
 
 <script>
+import DeleteButton from '../components/DeleteButton.vue'
+
 export default {
   data() {
     return {
@@ -20,7 +25,8 @@ export default {
     const result = await response.json()
     this.destinationList = result.results
     console.log(this.destinationList)
-  }
+  },
+  components: { DeleteButton }
 }
 </script>
 
@@ -40,5 +46,11 @@ export default {
 .destinations-list > li {
   padding: 5px;
   font-size: larger;
+}
+li {
+  display: flex;
+  justify-content: space-between;
+  width: 200px;
+  gap: 10px;
 }
 </style>
