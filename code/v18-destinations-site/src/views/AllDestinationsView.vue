@@ -4,8 +4,8 @@
     <ul class="destinations-list">
       <li v-for="destination in destinationList" :key="destination.id">
         <RouterLink to="/allDestinations/:id">
-          {{ destination.name }} {{ destination.id }}<DeleteButton :id="destination.id" />
-        </RouterLink>
+          {{ destination.name }} {{ destination.id }} </RouterLink
+        ><DeleteButton :id="destination.id" />
       </li>
     </ul>
   </div>

@@ -10,7 +10,7 @@ export default {
 
   data() {
     return {
-      destinationToDelete: null
+      destinationToDelete: this.id
     }
   },
 
@@ -18,16 +18,22 @@ export default {
     deleteClicked() {
       if (confirm('are you sure ?')) {
         alert(this.id)
+        fetch(`http://localhost:3000/allDestinations/${this.id}`, {
+          method: 'DELETE'
+        })
+          .then((response) => {
+            if (response.ok) {
+              alert('Destination deleted successfully')
+            } else {
+              alert('Failed to delete destination')
+            }
+          })
+          .catch((error) => {
+            console.error('Error deleting destination:', error)
+            alert('An error occurred while deleting destination')
+          })
       }
-      //fetch to connect to db
     }
-  },
-  async mounted() {
-    const response = await fetch(`http://localhost:3000/allDestinations/:id`)
-    const result = await response.json()
-    console.log(result)
-    this.destinationToDelete = result.destination
-    console.log(this.destinationToDelete)
   }
 }
 </script>
